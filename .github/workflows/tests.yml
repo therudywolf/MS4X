@@ -1,0 +1,43 @@
+name: tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Repository rules
+        run: python3 tests/test_repo.py
+      - name: Stock images of ms4x-net (downloaded for the run, never stored here)
+        run: |
+          set -eu
+          while read -r sum ref; do
+            case "$sum" in ''|'#'*) continue ;; esac
+            repo=${ref%%@*}; rest=${ref#*@}; commit=${rest%%/*}; path=${rest#*/}
+            mkdir -p "$RUNNER_TEMP/ms4x/$repo"
+            curl -sfL --retry 3 -o "$RUNNER_TEMP/ms4x/$repo/$(basename "$path")" \
+              "https://raw.githubusercontent.com/ms4x-net/$repo/$commit/$path"
+          done < tests/ms4x_images.txt
+      - name: C166 tools
+        env:
+          MS4X_IMAGES: ${{ runner.temp }}/ms4x
+        run: python3 tests/test_c166.py
+      - name: C166 emulator
+        env:
+          MS4X_IMAGES: ${{ runner.temp }}/ms4x
+        run: python3 tests/test_c166emu.py
+      - name: Image info
+        env:
+          MS4X_IMAGES: ${{ runner.temp }}/ms4x
+        run: python3 tests/test_ms4x_core.py

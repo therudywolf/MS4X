@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Firmware images, dumps and logs: never in this repository (CONTRIBUTING)
+*.bin
+*.BIN
+*.hex
+*.ori
+*.mod
+*.img
+*.eep
+*.s19
+*.srec
+*.csv
+*.log
+out*.bin
+
+# Temporary and backup files
+*.bak
+*.tmp
+*.swp
+*~
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

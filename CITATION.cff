@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use, share or build on this work, credit it as below (NOTICE)."
+title: "Siemens MS42 / MS43: reverse engineering, tools and documentation"
+type: software
+authors:
+  - given-names: Rudy
+    family-names: Wolf
+    alias: rudywolf
+    website: "https://rudywolf.ru"
+repository-code: "https://github.com/therudywolf/MS4X"
+url: "https://github.com/therudywolf/MS4X"
+license:
+  - Apache-2.0
+  - CC-BY-SA-4.0
+keywords:
+  - bmw
+  - siemens-ms42
+  - siemens-ms43
+  - c167
+  - disassembler
+  - emulator
+  - tunerpro
+  - reverse-engineering
