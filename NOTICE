@@ -1,0 +1,27 @@
+MS4X
+Copyright 2026 rudywolf (WOLF4X)
+https://github.com/therudywolf/MS4X
+
+Reverse engineering, tools and documentation for the Siemens MS42 (0110C6) and MS43
+(430069) engine control units of the BMW M52TU and M54 engines.
+
+Licences
+  Code (tools/, tests/, .github/workflows/): Apache License 2.0, see LICENSE.
+  Documentation (docs/, README.md, CHANGELOG.md, CONTRIBUTING.md) and data
+  (tests/ms4x_images.txt): CC BY-SA 4.0, see LICENSE-docs.
+
+Attribution
+  Anyone who copies, publishes or builds on this work (a tool, a document
+  or a part of them) credits the author as
+
+      rudywolf, https://github.com/therudywolf/MS4X
+
+  keeps this NOTICE file with the code, keeps the licence and credit lines in the
+  documents and in files that carry them in their header, and says what was changed.
+
+Not covered
+  The WOLF4X name and logo (assets/) are not licensed for reuse.
+  Firmware of Siemens and BMW is not part of this repository and is not covered by
+  these licences. Siemens, Continental and BMW are trademarks of their owners; this
+  project is not affiliated with them, nor with the MS4X wiki (ms4x.net) or the
+  ms4x-net project, whose definitions and patchlists it builds on.

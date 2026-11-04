@@ -1,0 +1,8 @@
+# Documents (EN)
+
+Documents come in pairs with [`docs/ru`](../ru/README.md): the same file names, the same facts.
+
+| Document | What it covers |
+|---|---|
+| [01 C166 tools](01-c166-tools.md) | Disassembler, assembler and code walker: commands, syntax, memory maps of 0110C6 and 430069, how it is checked |
+| [02 What is in an image, and the community patchlists](02-image-info-and-patchlists.md) | `ms4x_core.py info`: program, checksums, stock or not, free area, patches of your patchlist, differences against stock; patches that share bytes; the two 32-bit sums of the 430069; findings in the factory programs |
